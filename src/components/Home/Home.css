@@ -1,0 +1,46 @@
+.owl-stage-outer{
+    direction: ltr !important;
+}
+.owl-nav{
+    display: flex !important;
+    justify-content: center !important;
+    font-size: 30px !important;
+    margin-top: 20px;
+}
+.secondowl button{
+    display: none !important;
+}
+
+.owl-prev{
+    margin-left: 20px !important;
+    background-color: #363f4d !important;
+    color: white !important;
+    width: 45px !important;
+    display: flex !important;
+    justify-content: center !important;
+}
+.owl-next{
+    background-color: #363f4d !important;
+    color: white !important;
+    width: 45px !important;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.owl-prev:hover{
+
+background-color: #664BFA !important;
+transition: all ease 0.3s !important;
+}
+.owl-next:hover{
+background-color: #664BFA !important;
+transition: all ease 0.3s !important;
+    
+}
+.carousel{
+    direction: ltr !important;
+}
+.owl-item{
+    display: flex !important;
+    justify-content: center !important;
+}
