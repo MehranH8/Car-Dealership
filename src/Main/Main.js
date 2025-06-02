@@ -8,6 +8,7 @@ import Bikes from "../components/Bikes/Bikes";
 import Cardetail from "../components/Cardetail/Cardetail";
 import Bikedetail from "../components/Bikedetail/Bikedetail";
 import Posting from "../components/Posting/Posting";
+import Page404 from "../UI/Page404/Page404"
 
 
 const Main = () => {
@@ -25,6 +26,7 @@ const Main = () => {
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/detail/:id" element={<Blogdetail/>} />
                 <Route path="/posting" element={<Posting />} />
+                <Route path="*" element={<Page404 />} />
             </Routes>
         </div>
     )

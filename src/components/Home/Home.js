@@ -75,7 +75,7 @@ const Home = () => {
                 <div className="bg-bggrey pt-20 pb-36">
                     <div className="mx-8">
                         <div className="mb-6">
-                            <h1 className="text-[28px] sm:text-[30px] text-mainblue font-bold text-center">
+                            <h1 className=" md:text-[28px] sm:text-[24px] text-[20px] text-mainblue font-bold text-center">
                                 خرید خودرو
                             </h1>
                         </div>

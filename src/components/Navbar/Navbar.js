@@ -25,6 +25,14 @@ import { IoMenu } from "react-icons/io5";
 
 
 const Navbarmain = () => {
+
+    const [openRight, setOpenRight] = React.useState(false);
+    const openDrawerRight = () => setOpenRight(true);
+    const closeDrawerRight = () => setOpenRight(false);
+
+
+    const [activeTab, setActiveTab] = React.useState("car");
+
     {/*navbar data */ }
     const navList = (
         <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
@@ -54,24 +62,24 @@ const Navbarmain = () => {
     {/*car */ }
     const carmenu = (
         <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-            <Link to="/cars">
-                <li className=" text-black mb-3 pb-1 hover:text-mainblue flex gap-x-3 transition-all duration-200 border-b-[2px] px-1 border-white hover:border-mainblue text-[16px]">
+            <Link onClick={closeDrawerRight} to="/cars">
+                <li className=" text-black mb-3 pb-1 hover:text-mainblue flex gap-x-3 transition-all duration-200 border-b-[2px] px-1 border-white hover:border-mainblue text-[14px]">
                     <span className="my-auto text-[20px]">
                         <FaCar />
                     </span>
                     خرید خودرو
                 </li>
             </Link>
-            <Link to="/posting">
-                <li className=" flex gap-x-3 mb-3 text-black pb-1 hover:text-mainblue transition-all duration-200 border-b-[2px] px-1 border-white hover:border-mainblue text-[16px]">
+            <Link onClick={closeDrawerRight} to="/posting">
+                <li className=" flex gap-x-3 mb-3 text-black pb-1 hover:text-mainblue transition-all duration-200 border-b-[2px] px-1 border-white hover:border-mainblue text-[14px]">
                     <span className="my-auto text-[20px]">
                         <FaPlus />
                     </span>
                     ثبت آگهی
                 </li>
             </Link>
-            <Link to="/blog">
-                <li className=" flex gap-x-3 mb-3 text-black pb-1 hover:text-mainblue transition-all duration-200 border-b-[2px] px-1 border-white hover:border-mainblue text-[16px]">
+            <Link onClick={closeDrawerRight} to="/blog">
+                <li className=" flex gap-x-3 mb-3 text-black pb-1 hover:text-mainblue transition-all duration-200 border-b-[2px] px-1 border-white hover:border-mainblue text-[14px]">
                     <span className="my-auto text-[20px]">
                         <HiSpeakerphone />
                     </span>
@@ -85,24 +93,24 @@ const Navbarmain = () => {
     {/*bike */ }
     const bikemenu = (
         <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-            <Link to="/bikes">
-                <li className=" text-black mb-3 pb-1 hover:text-mainblue flex gap-x-3 transition-all duration-200 border-b-[2px] px-1 border-white hover:border-mainblue text-[16px]">
+            <Link onClick={closeDrawerRight} to="/bikes">
+                <li className=" text-black mb-3 pb-1 hover:text-mainblue flex gap-x-3 transition-all duration-200 border-b-[2px] px-1 border-white hover:border-mainblue text-[14px]">
                     <span className="my-auto text-[20px]">
                         <PiMotorcycleFill />
                     </span>
                     خرید موتور سیکلت
                 </li>
             </Link>
-            <Link to="/posting">
-                <li className=" flex gap-x-3 mb-3 text-black pb-1 hover:text-mainblue transition-all duration-200 border-b-[2px] px-1 border-white hover:border-mainblue text-[16px]">
+            <Link onClick={closeDrawerRight} to="/posting">
+                <li className=" flex gap-x-3 mb-3 text-black pb-1 hover:text-mainblue transition-all duration-200 border-b-[2px] px-1 border-white hover:border-mainblue text-[14px]">
                     <span className="my-auto text-[20px]">
                         <FaPlus />
                     </span>
                     ثبت آگهی
                 </li>
             </Link>
-            <Link to="/blog">
-                <li className=" flex gap-x-3 mb-3 text-black pb-1 hover:text-mainblue transition-all duration-200 border-b-[2px] px-1 border-white hover:border-mainblue text-[16px]">
+            <Link onClick={closeDrawerRight} to="/blog">
+                <li className=" flex gap-x-3 mb-3 text-black pb-1 hover:text-mainblue transition-all duration-200 border-b-[2px] px-1 border-white hover:border-mainblue text-[14px]">
                     <span className="my-auto text-[20px]">
                         <HiSpeakerphone />
                     </span>
@@ -130,12 +138,7 @@ const Navbarmain = () => {
     {/*drawer data */ }
 
 
-    const [openRight, setOpenRight] = React.useState(false);
-    const openDrawerRight = () => setOpenRight(true);
-    const closeDrawerRight = () => setOpenRight(false);
-
-
-    const [activeTab, setActiveTab] = React.useState("car");
+ 
 
     return (
         <div className="sticky top-0 h-fit z-[99999] bg-white ">
@@ -149,7 +152,7 @@ const Navbarmain = () => {
                     onClick={closeDrawerRight}
                     className="text-[26px] sm:text-[32px] flex justify-between mb-8 "
                 >
-                    <Link to="/">
+                    <Link onClick={closeDrawerRight} to="/">
                         <h2 className="text-[20px] sm:text-[24px] font-bold text-mainblue mt-1 my-auto mr-2">
                             LOGO
                         </h2>
@@ -187,8 +190,8 @@ const Navbarmain = () => {
                     </TabsBody>
                 </Tabs>
                 <div className="mx-6">
-                    <Link to="/posting">
-                        <button className="w-full bg-mainblue border-[3px] border-mainblue hover:bg-white transition-colors duration-300 hover:text-mainblue text-white py-1.5 rounded flex gap-x-2 justify-center" type="button">
+                    <Link onClose={closeDrawerRight} to="/posting">
+                        <button className="w-full text-[14px] bg-mainblue border-[3px] border-mainblue hover:bg-white transition-colors duration-300 hover:text-mainblue text-white py-1.5 rounded flex gap-x-2 justify-center" type="button">
                             <span className="my-auto">
                                 <FaPlus />
                             </span>
